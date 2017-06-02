@@ -1,13 +1,13 @@
 <?php
   # Variables used through the site
-  $siteName = "Arlington Visual Budget";
+  $siteName = "Durham Visual Budget";
   $siteURL = "arlingtonvisualbudget.org";
-  $municipalURL = "http://town.arlington.ma.us";
+  $municipalURL = "http://http://durhamnc.gov/";
   $feedbackEmail = "arlington-internal@goinvo.com";
-  $shortName = "Arlington";
-  $longName = "Town of Arlington";
-  $state = "Massachusetts";
-  $stateAbbreviation = "MA";
+  $shortName = "Durham";
+  $longName = "City of Durham";
+  $state = "North Carolina";
+  $stateAbbreviation = "NC";
   $gaKey = "UA-10273473-12";
 
   # Variables for update.php

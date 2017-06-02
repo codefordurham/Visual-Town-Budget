@@ -330,12 +330,12 @@ avb.home = function () {
             height: scale(data[1].values[yearIndex].val)
         }, duration)
             .find('.node-value').text(formatcurrency(data[1].values[yearIndex].val));
-        // funds animation
-        $('#funds-node').animate({
-            height: scale(data[2].values[yearIndex].val)
-        }, duration)
-            .find('.node-value').text(formatcurrency(data[2].values[yearIndex].val));
-        $('.node-value').fadeIn(duration);
+        // // funds animation
+        // $('#funds-node').animate({
+        //     height: scale(data[2].values[yearIndex].val)
+        // }, duration)
+        //     .find('.node-value').text(formatcurrency(data[2].values[yearIndex].val));
+        // $('.node-value').fadeIn(duration);
 
         // hook up click actions
         $('.node').click(sectionClick);
@@ -370,9 +370,9 @@ avb.home = function () {
 
         // start application
         initializeVisualizations({
-            "section": "funds"
+            "section": "expenses"
         });
-        
+
         // do not highlight any sections while homepage is open
         $('.section').removeClass('selected');
 

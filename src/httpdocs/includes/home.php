@@ -95,20 +95,6 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="node" data-section="funds" style=
-                            "left: 200px; width: 100px;">
-                                <div>
-                                    Funds
-                                </div>
-
-                                <div class="node-bar" id="funds-node"
-                                style=" background-color: #ff993e;">
-                                    <div class="node-value">
-                                        11
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>

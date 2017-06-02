@@ -189,7 +189,7 @@ def updateHome():
 	global FIRST_YEAR, LAST_YEAR, MAX_LEVEL
 
 	# the files used to generate home data
-	files = ['../revenues.csv', '../expenses.csv', '../funds.csv']
+	files = ['./revenues.csv', './expenses.csv']
 	sections = []
 
 	# add root entries from all 3 files to sections []

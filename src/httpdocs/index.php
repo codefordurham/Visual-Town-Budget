@@ -17,7 +17,7 @@
 
 
     <?php
-      $dataSections = array('revenues', 'expenses', 'funds');
+      $dataSections = array('revenues', 'expenses');
       require_once 'includes/imports.php';
     ?>
 

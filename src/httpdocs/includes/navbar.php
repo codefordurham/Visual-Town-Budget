@@ -10,7 +10,7 @@
 
     <div id="navbar-links" style="line-height:30px;">
 
-     <div onclick='window.location = "/"' class="entry homebutton"> Town Budget, Visualized </div>
+     <div onclick='window.location = "/"' class="entry homebutton"> Visual City Budget </div>
 
      <div class="entry navbar-margin">
         <span class="menubutton section margin" data-section="revenues"><a href="/revenues">Revenues</a></span>

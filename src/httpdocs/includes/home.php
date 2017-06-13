@@ -4,7 +4,7 @@
     <div class="container">
         <div class="hero-unit">
             <div id="welcome-hero">
-                <h1>See your town's budget.</h1>
+                <h1>See your city's budget.</h1>
 
                 <div class="home-column" id="home-col1" style=
                 "display:inline-block;">
@@ -45,7 +45,7 @@
 
                         <div>
                             <a class='link' data-section="expenses" id='q2'
-                            style='color:#db4e86'>How much money does the Town spend on schools?</a>
+                            style='color:#db4e86'>How much money does the City spend on schools?</a>
                         </div>
 
                         <div>

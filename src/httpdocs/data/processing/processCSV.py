@@ -32,7 +32,7 @@ class entry:
 		children = []
 		for child in self.children:
 			children.append(child.reprJSON())
-		return dict(key=self.key, descr=self.descr, src= self.source, url= self.url, values=values, hash=self.hashEntry()[:8], sub=children) 
+		return dict(key=self.key, descr=self.descr, src= self.source, url= self.url, values=values, hash=self.hashEntry()[:8], sub=children)
 
 
 # given a csv file generates a list of entry object,
@@ -42,16 +42,12 @@ def generateList(inputFile):
 	global LAST_YEAR
 	global MAX_LEVEL
 	csventries = []
-	
-	# attempt opening file if inputFile is not 
+
+	# attempt opening file if inputFile is not
 	# a file descriptor
 	if isinstance(inputFile, str):
 		filename = inputFile.split('/')[-1].split('.')[0]
-		try:
-			csvfile = open(inputFile, 'rU')
-		except Exception, e:
-			print('FATAL: Error opening ' + inputFile)
-			exit(1)
+		csvfile = open(inputFile, 'rU')
 	else:
 		csvfile = inputFile
 
@@ -74,30 +70,26 @@ def generateList(inputFile):
 					LAST_YEAR = int(key) if LAST_YEAR == None else max(LAST_YEAR, int(key))
 			yearSet = True
 
-		try:
-			#find name
-			name = ''
-			for level in reversed(range(1,MAX_LEVEL+1)):
-				if(row['LEVEL' + str(level)] != ''):
-					name = row['LEVEL' + str(level)]
-					break
-			#populate yearly values
-			rowValues = []
-			for year in range(FIRST_YEAR, LAST_YEAR+1):
+		#find name
+		name = ''
+		for level in reversed(range(1,MAX_LEVEL+1)):
+			if(row['LEVEL' + str(level)] != ''):
+				name = row['LEVEL' + str(level)]
+				break
+		#populate yearly values
+		rowValues = []
+		for year in range(FIRST_YEAR, LAST_YEAR+1):
 
-				#attempt parsing, value=0 in case of fails
+			#attempt parsing, value=0 in case of fails
+			value = 0
+			try:
+				value = float(row[str(year)].replace(',', '').replace(' ', ''))
+			except:
 				value = 0
-				try:
-					value = float(row[str(year)].replace(',', '').replace(' ', ''))
-				except:
-					value = 0
-				rowValues.append((year, value))
-			#create new entry object and add to list	
-			csventries.append(entry(name.replace(' Total',''),row['TOOLTIP'], row['SOURCE'], row['SOURCE URL'], rowValues, int(row['LEVEL'])))
+			rowValues.append((year, value))
+		#create new entry object and add to list
+		csventries.append(entry(name.replace(' Total',''),row['TOOLTIP'], row['SOURCE'], row['SOURCE URL'], rowValues, int(row['LEVEL'])))
 
-		except Exception, e:
-			print('FATAL: Error parsing line ' + str(currentRow) + ': ' + str(row))
-			exit(1)
 
 		#update row number (useful for printing errors)
 		currentRow += 1
@@ -117,8 +109,8 @@ def generateTree(csventries, filename):
 	if csventries[0].level != 0:
 		print('FATAL: Total Row (last in the CSV), must have a level of 0')
 		exit(1)
-		
-	#assign name to root		
+
+	#assign name to root
 	csventries[0].key = filename.capitalize()
 
 	#tree-structure creation
@@ -126,39 +118,34 @@ def generateTree(csventries, filename):
 	duplicates = []
 	lastNode = None
 	for node in csventries:
-		try:
-			#print('@' + node.key)
-			#checking for total of 1 field
-			if(lastNode != None and node.key == lastNode.key):
-				#print('skipping ' + node.key)
-				if(lastNode.descr == ''):
-					lastNode.descr = node.descr
-				duplicates += [node]
-				continue
-			#going one level deeper
-			if(node.level > (len(stack)-1)):
-				if(node.level != 0):
-					#print('+ ' + stack[-1].key + ' -> ' + node.key)
-					stack[-1].children.append(node)
-				stack.append(node)
-			#staying on same level
-			elif (node.level == (len(stack)-1)):
-				stack.pop().key;
-				stack.append(node)
-				stack[-2].children.append(node)
-				#print("= " + stack[-2].key + ' -> ' + node.key)
-			#pop deeper levels
-			else:
-				while (node.level < (len(stack))):
-					stack.pop()
+		#print('@' + node.key)
+		#checking for total of 1 field
+		if(lastNode != None and node.key == lastNode.key):
+			#print('skipping ' + node.key)
+			if(lastNode.descr == ''):
+				lastNode.descr = node.descr
+			duplicates += [node]
+			continue
+		#going one level deeper
+		if(node.level > (len(stack)-1)):
+			if(node.level != 0):
+				#print('+ ' + stack[-1].key + ' -> ' + node.key)
 				stack[-1].children.append(node)
-				#print("- " + stack[-1].key + ' -> ' + node.key)
-				stack.append(node)
-			lastNode = node
-		except Exception, e:
-			print(e)
-			print('FATAL: Error reconstructing tree at node: ' + str(node))
-			exit(1)
+			stack.append(node)
+		#staying on same level
+		elif (node.level == (len(stack)-1)):
+			stack.pop().key;
+			stack.append(node)
+			stack[-2].children.append(node)
+			#print("= " + stack[-2].key + ' -> ' + node.key)
+		#pop deeper levels
+		else:
+			while (node.level < (len(stack))):
+				stack.pop()
+			stack[-1].children.append(node)
+			#print("- " + stack[-1].key + ' -> ' + node.key)
+			stack.append(node)
+		lastNode = node
 
 	# delete duplicates
 	for dup in duplicates:
@@ -171,11 +158,7 @@ def generateTree(csventries, filename):
 		curnode = curnode.children[0]
 
 	# tree to json format
-	try:
-		outputFile = open(filename + '.json', 'w')
-	except  Exception, e:
-		print('FATAL: Error opening output file.')
-		exit(1)
+	outputFile = open(filename + '.json', 'w')
 
 	# dump in json structure
 	jsontext = json.dumps(root.reprJSON(), indent=0).replace('\n', '').replace('\r', '')
@@ -189,7 +172,7 @@ def updateHome():
 	global FIRST_YEAR, LAST_YEAR, MAX_LEVEL
 
 	# the files used to generate home data
-	files = ['./revenues.csv', './expenses.csv']
+	files = ['revenues.csv', 'expenses.csv']
 	sections = []
 
 	# add root entries from all 3 files to sections []
@@ -197,24 +180,17 @@ def updateHome():
 		FIRST_YEAR = None
 		LAST_YEAR = None
 		MAX_LEVEL = 0
-		try:
-			fd = open(os.path.dirname(__file__) + file, 'rU')
-			csventries = generateList(fd)
-			sections += [csventries[-1]]
-		except Exception, e:
-			print('FATAL: Error in proceesing files for homepage update.')
-			exit(1)
+
+		fd = open(os.path.join(os.path.dirname(__file__), '..', file), 'rU')
+		csventries = generateList(fd)
+		sections += [csventries[-1]]
 
 	# create root and add the 3 sections as children
 	root = entry('root','', '', '', [], 0)
 	root.children += sections
 
 	# dump data to json file
-	try:
-		outputFile = open('home.json', 'w')
-	except Exception, e:
-		print('FATAL: Error opening home.json for write.')
-		exit(1)
+	outputFile = open('home.json', 'w')
 
 	jsontext = json.dumps(root.reprJSON(), indent=0).replace('\n', '').replace('\r', '')
 	outputFile.write(jsontext)
@@ -222,7 +198,7 @@ def updateHome():
 
 	# print output file name
 	print('home.json')
-		
+
 def updateData(inputFile):
 	outputFile = inputFile.split('/')[-1].split('.')[0]
 	csventries = generateList(inputFile)

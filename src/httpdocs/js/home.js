@@ -166,7 +166,7 @@ avb.home = function () {
             hide();
         }
 
-        /* 
+        /*
         *   starts a tour with a slight delay
         *   this gives the homepage enough time to minimize
         *
@@ -201,7 +201,7 @@ avb.home = function () {
         // visualization init
         home.map = $('#home-map-svg');
         home.menubar = $('#avb-menubar');
-        
+
         $('.section').removeAttr('onclick');
 
         // taxes input box initialization
@@ -308,8 +308,8 @@ avb.home = function () {
 
     /*
     *   Executes home bars transition
-    *  
-    *   @param {int} duration - transition duration   
+    *
+    *   @param {int} duration - transition duration
     */
     showGraph = function (duration) {
         // get data
@@ -356,10 +356,10 @@ avb.home = function () {
         $('#avb-body').css({opacity : 0});
         $('#avb-body').delay(200).animate({opacity : 1});
 
-        home.overlay.show();
+        // home.overlay.show();
 
         // fade in homepage content
-        home.content.delay(300).fadeIn();
+        // home.content.delay(300).fadeIn();
 
         // show section bar animation
         var data = JSON.parse($('#data-home').html());

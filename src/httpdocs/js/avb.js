@@ -159,6 +159,11 @@ function loadData() {
     avb.lastYear = d3.max(avb.root.values, function (d) {
         return d.year
     });
+
+    if (avb.thisYear > avb.lastYear) {
+        avb.thisYear = avb.lastYear;
+    }
+
     yearIndex = avb.thisYear - avb.firstYear;
     avb.navbar.initialize(avb.thisYear);
 

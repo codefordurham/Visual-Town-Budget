@@ -1,82 +1,78 @@
 /*
-	File Overview:	Print Styles SCSS
-	Author:			Ivan DiLernia
-	Description:	Includes all styles for primary styles for the site.
+Error: File to import not found or unreadable: compass/css3.
+       Load path: /Users/josh/code/Visual-Town-Budget/src/scss
+        on line 8 of src/scss/partials/_base.scss
+        from line 7 of src/scss/print.scss
+
+3: 	Author:			Ivan DiLernia
+4: 	Description:	Includes all styles for primary styles for the site.
+5: *\/
+6: 
+7: @import "partials/base";
+8: 
+9: // best printed on landscape
+10: @page {
+11: 	size: landscape;
+12: }
+13: 
+
+Backtrace:
+src/scss/partials/_base.scss:8
+src/scss/print.scss:7
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/tree/import_node.rb:45:in `import'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/tree/import_node.rb:37:in `css_import?'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:313:in `visit_import'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `block (2 levels) in visit_import'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `map'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `block in visit_import'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/stack.rb:88:in `block in with_import'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/stack.rb:88:in `with_import'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:159:in `visit'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:294:in `watch'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/plugin.rb:109:in `method_missing'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:360:in `watch_or_update'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/exec/base.rb:52:in `parse'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/lib/sass/exec/base.rb:19:in `parse!'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/gems/sass-3.4.22/bin/sass:13:in `<top (required)>'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/bin/sass:23:in `load'
+/Users/josh/.rvm/gems/ruby-1.9.3-p545/bin/sass:23:in `<main>'
 */
-/*
-	File Overview:	Base scss definitions
-	Authors:		Michael Bester,
-					Ivan DiLernia, Roger Zhu
-*/
-/* Compass global imports */
-/* Configure for target Browser Set
-   Chrome, IE8+
-============================================*/
-/*
-*	Fonts
-*/
-/*
-*	Colors
-*/
-/*
-*	Page
-*/
-/* line 44, ../../scss/partials/_base.scss */
-html {
-  min-height: 100%;
-  position: relative;
-}
-
-/* line 49, ../../scss/partials/_base.scss */
-body {
-  color: #333333;
-  font-family: 'Strait', sans-serif;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background-image: url(/img/bg_avb.png);
-  height: 100%;
-}
-
-/* line 58, ../../scss/partials/_base.scss */
-p {
-  vertical-align: top;
-}
-
-/*
-* Tablet Portait + Landscape
-*/
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  /* line 66, ../../scss/partials/_base.scss */
-  body, html {
-    font-size: 12px;
-  }
-}
-@page {
-  size: landscape;
-}
-
-/* line 15, ../../scss/print.scss */
-.popover {
-  background: white !important;
-}
-
-/* line 20, ../../scss/print.scss */
-#zoombutton {
-  display: none;
-}
-
-/* line 24, ../../scss/print.scss */
-.overflows {
-  display: none;
-}
-
-/* line 29, ../../scss/print.scss */
-a:link:after, a:visited:after {
-  content: "";
-}
-
-/* line 33, ../../scss/print.scss */
-#avb-body {
-  margin-bottom: 20px;
-}
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: compass/css3.\A        Load path: /Users/josh/code/Visual-Town-Budget/src/scss\A         on line 8 of src/scss/partials/_base.scss\A         from line 7 of src/scss/print.scss\A \A 3: 	Author:			Ivan DiLernia\A 4: 	Description:	Includes all styles for primary styles for the site.\A 5: */\A 6: \A 7: @import \"partials/base\";\A 8: \A 9: // best printed on landscape\A 10: @page {\A 11: 	size: landscape;\A 12: }\A 13: "; }

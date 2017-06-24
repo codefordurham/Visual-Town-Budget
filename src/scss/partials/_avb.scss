@@ -5,6 +5,10 @@
     Roger Zhu <roger@goinvo.com>
 */
 
+%shadowed {
+  @include box-shadow(0px 0px 10px $light-gray);
+}
+
 /*
 * Main container
 */
@@ -15,8 +19,7 @@
   padding-top: 10px;
   text-align: left;
   background-color: $white;
-
-  @include box-shadow(0px 0px 10px $light-gray);
+  @extend %shadowed;
 }
 
 /*
@@ -50,7 +53,7 @@
 
 /*
 * Tablet Portait + Landscape
-*/ 
+*/
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
 
   .container {
@@ -67,7 +70,7 @@
 
   #navigation-container,
   #information-container {
-    height: 550px;  
+    height: 550px;
   }
 
 }
@@ -156,4 +159,35 @@
 #footer {
   text-align:center;
   margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.footer__credits {
+  text-align: center;
+  margin: 15px auto;
+}
+
+.footer__credits__badge {
+  display: inline-block;
+  text-align: left;
+  margin: 0 15px 0 0;
+}
+
+.footer__credits__badge--link {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.footer__credits__badge--img {}
+
+.footer__credits__badge--code-for-durham {
+  width: 150px;
+  @include border-radius(8px);
+  @extend %shadowed;
+}
+
+.footer__credits__badge--open-durham {
+  width: 319px;
+  @include border-radius(3px);
+  @extend %shadowed;
 }

@@ -1,4 +1,4 @@
-<link href='http://fonts.googleapis.com/css?family=Strait' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Strait' rel='stylesheet' type='text/css'>
 <link href="/css/lib/bootstrap/bootstrap.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="/css/lib/intro/introjs.min.css">
 <link rel="stylesheet" type="text/css" href="/css/global.css">

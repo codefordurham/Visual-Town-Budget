@@ -58,10 +58,17 @@ p {
     Ivan DiLernia <ivan@goinvo.com>
     Roger Zhu <roger@goinvo.com>
 */
+/* line 8, ../../scss/partials/_avb.scss */
+#avb-wrap, .footer__credits__badge--code-for-durham, .footer__credits__badge--open-durham {
+  -moz-box-shadow: 0px 0px 10px #ccc;
+  -webkit-box-shadow: 0px 0px 10px #ccc;
+  box-shadow: 0px 0px 10px #ccc;
+}
+
 /*
 * Main container
 */
-/* line 11, ../../scss/partials/_avb.scss */
+/* line 15, ../../scss/partials/_avb.scss */
 #avb-wrap {
   position: relative;
   margin-bottom: 10px;
@@ -69,8 +76,6 @@ p {
   padding-top: 10px;
   text-align: left;
   background-color: #f9f9f9;
-  -webkit-box-shadow: 0px 0px 10px #cccccc;
-  box-shadow: 0px 0px 10px #cccccc;
 }
 
 /*
@@ -80,22 +85,22 @@ p {
 /*
 * Defaults to > 1200px width
 */
-/* line 30, ../../scss/partials/_avb.scss */
+/* line 33, ../../scss/partials/_avb.scss */
 .container {
   width: 1200px;
 }
 
-/* line 35, ../../scss/partials/_avb.scss */
+/* line 38, ../../scss/partials/_avb.scss */
 #chart-wrap {
   height: 250px;
 }
 
-/* line 40, ../../scss/partials/_avb.scss */
+/* line 43, ../../scss/partials/_avb.scss */
 #info-wrap {
   height: 250px;
 }
 
-/* line 46, ../../scss/partials/_avb.scss */
+/* line 48, ../../scss/partials/_avb.scss */
 #navigation-container,
 #information-container {
   height: 600px;
@@ -105,28 +110,28 @@ p {
 * Tablet Portait + Landscape
 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  /* line 56, ../../scss/partials/_avb.scss */
+  /* line 59, ../../scss/partials/_avb.scss */
   .container {
     width: 980px;
   }
 
-  /* line 60, ../../scss/partials/_avb.scss */
+  /* line 63, ../../scss/partials/_avb.scss */
   #chart-wrap {
     height: 220px;
   }
 
-  /* line 64, ../../scss/partials/_avb.scss */
+  /* line 67, ../../scss/partials/_avb.scss */
   #info-wrap {
     height: 250px;
   }
 
-  /* line 69, ../../scss/partials/_avb.scss */
+  /* line 71, ../../scss/partials/_avb.scss */
   #navigation-container,
   #information-container {
     height: 550px;
   }
 }
-/* line 83, ../../scss/partials/_avb.scss */
+/* line 86, ../../scss/partials/_avb.scss */
 .introjs-tooltip {
   font-size: 18px;
 }
@@ -134,28 +139,28 @@ p {
 /*
 * Separator class
 */
-/* line 90, ../../scss/partials/_avb.scss */
+/* line 93, ../../scss/partials/_avb.scss */
 .separator:after {
   display: block;
   border: none;
   height: 1px;
-  background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#cccccc), to(white));
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
-  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
-  background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+  background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#ccc), to(#fff));
+  background-image: -webkit-linear-gradient(left, transparent, rgba(0, 0, 0, 0.2), transparent);
+  background-image: -moz-linear-gradient(left, transparent, rgba(0, 0, 0, 0.2), transparent);
+  background-image: -ms-linear-gradient(left, transparent, rgba(0, 0, 0, 0.2), transparent);
+  background-image: -o-linear-gradient(left, transparent, rgba(0, 0, 0, 0.2), transparent);
 }
 
 /*
 * Links
 */
-/* line 104, ../../scss/partials/_avb.scss */
+/* line 107, ../../scss/partials/_avb.scss */
 .link {
   text-decoration: underline;
   cursor: pointer;
   color: black;
 }
-/* line 109, ../../scss/partials/_avb.scss */
+/* line 112, ../../scss/partials/_avb.scss */
 .link:hover {
   color: steelblue;
 }
@@ -163,13 +168,13 @@ p {
 /*
 * Opendata section css
 */
-/* line 118, ../../scss/partials/_avb.scss */
+/* line 121, ../../scss/partials/_avb.scss */
 .dataDownload {
   font-size: 18px;
   line-height: 28px;
   margin-top: 10px;
 }
-/* line 123, ../../scss/partials/_avb.scss */
+/* line 126, ../../scss/partials/_avb.scss */
 .dataDownload .icon-download {
   vertical-align: baseline;
 }
@@ -177,33 +182,69 @@ p {
 /*
 * Glossary section css
 */
-/* line 131, ../../scss/partials/_avb.scss */
+/* line 134, ../../scss/partials/_avb.scss */
 #avb-glossary {
   padding: 10px;
 }
-/* line 135, ../../scss/partials/_avb.scss */
+/* line 138, ../../scss/partials/_avb.scss */
 #avb-glossary .definition {
   margin-bottom: 20px;
 }
-/* line 140, ../../scss/partials/_avb.scss */
+/* line 142, ../../scss/partials/_avb.scss */
 #avb-glossary .definition .title,
 #avb-glossary .definition .description {
   font-size: 18px;
 }
-/* line 144, ../../scss/partials/_avb.scss */
+/* line 147, ../../scss/partials/_avb.scss */
 #avb-glossary .definition .title {
   font-weight: bold;
   color: #d63366;
 }
-/* line 149, ../../scss/partials/_avb.scss */
+/* line 152, ../../scss/partials/_avb.scss */
 #avb-glossary .definition .description {
   margin-left: 10px;
 }
 
-/* line 156, ../../scss/partials/_avb.scss */
+/* line 159, ../../scss/partials/_avb.scss */
 #footer {
   text-align: center;
   margin-bottom: 5px;
+  font-size: 14px;
+}
+
+/* line 165, ../../scss/partials/_avb.scss */
+.footer__credits {
+  text-align: center;
+  margin: 15px auto;
+}
+
+/* line 170, ../../scss/partials/_avb.scss */
+.footer__credits__badge {
+  display: inline-block;
+  text-align: left;
+  margin: 0 15px 0 0;
+}
+
+/* line 176, ../../scss/partials/_avb.scss */
+.footer__credits__badge--link {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* line 183, ../../scss/partials/_avb.scss */
+.footer__credits__badge--code-for-durham {
+  width: 150px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+
+/* line 189, ../../scss/partials/_avb.scss */
+.footer__credits__badge--open-durham {
+  width: 319px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
 }
 
 /*
@@ -264,7 +305,7 @@ p {
   font-family: 'Strait', sans-serif;
 }
 
-/* line 56, ../../scss/partials/_home.scss */
+/* line 55, ../../scss/partials/_home.scss */
 #home-col1,
 #home-col2 {
   width: 46%;
@@ -352,7 +393,7 @@ p {
 */
 /* line 11, ../../scss/partials/_chart.scss */
 #chart-wrap {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
   cursor: pointer;
   width: 100%;
   position: absolute;
@@ -670,7 +711,7 @@ p {
   display: inline-block;
   position: relative;
 }
-/* line 43, ../../scss/partials/_navbar.scss */
+/* line 42, ../../scss/partials/_navbar.scss */
 #avb-menubar .homebutton,
 #avb-menubar .menubutton {
   cursor: pointer;
@@ -779,7 +820,7 @@ p {
   cursor: pointer;
   padding-top: 5px;
   padding-bottom: 5px;
-  border-bottom: 1px solid #aaaaaa;
+  border-bottom: 1px solid #aaa;
   font-size: 18px;
   line-height: 40px;
 }
@@ -881,7 +922,7 @@ p {
 */
 /* line 8, ../../scss/partials/_treemap.scss */
 #navigation {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
   position: relative;
   height: 88%;
   width: 100%;
@@ -905,7 +946,7 @@ p {
 #navigation text {
   font-size: 1.2em;
 }
-/* line 32, ../../scss/partials/_treemap.scss */
+/* line 31, ../../scss/partials/_treemap.scss */
 #navigation rect.parent,
 #navigation .grandparent rect {
   stroke-width: 4px;
@@ -914,7 +955,7 @@ p {
 #navigation rect.parent {
   opacity: 0.6;
 }
-/* line 41, ../../scss/partials/_treemap.scss */
+/* line 40, ../../scss/partials/_treemap.scss */
 #navigation .children:hover rect.parent,
 #navigation .grandparent:hover rect {
   opacity: 1.0;
@@ -944,7 +985,7 @@ p {
   padding: 8px;
   font-family: 'Strait', sans-serif;
 }
-/* line 77, ../../scss/partials/_treemap.scss */
+/* line 76, ../../scss/partials/_treemap.scss */
 #navigation .textdiv .titleLabel,
 #navigation .textdiv .valueLabel {
   overflow: hidden;
@@ -979,15 +1020,12 @@ p {
 /* line 110, ../../scss/partials/_treemap.scss */
 #ie-popover {
   z-index: 2030;
-  width: 180px;
-  min-width: 150px;
-  min-height: 30px;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.5);
   display: none;
   position: absolute;
   border-radius: 5px;
 }
-/* line 120, ../../scss/partials/_treemap.scss */
+/* line 117, ../../scss/partials/_treemap.scss */
 #ie-popover .arrow {
   z-index: 1050;
   position: absolute;
@@ -995,20 +1033,15 @@ p {
   height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-top: 10px solid rgba(0, 0, 0, 0.6);
+  border-top: 10px solid rgba(0, 0, 0, 0.5);
 }
-/* line 132, ../../scss/partials/_treemap.scss */
+/* line 127, ../../scss/partials/_treemap.scss */
 #ie-popover .text {
   color: white;
-  position: relative;
-  display: block;
   padding: 5px;
 }
-
+/* line 132, ../../scss/partials/_treemap.scss */
 #ie-popover .popover-title {
-  background-color: rgba(0, 0, 0, 0);
   color: white;
-  position: relative;
-  display: block;
   padding: 5px;
 }

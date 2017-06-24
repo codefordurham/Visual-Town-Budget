@@ -3,6 +3,7 @@
   $siteName = "Durham Visual Budget";
   $siteURL = "arlingtonvisualbudget.org";
   $municipalURL = "http://durhamnc.gov/";
+  $codeForURL = "http://codefordurham.com/";
   $dataPortalURL = "https://opendurham.nc.gov";
   $feedbackEmail = "arlington-internal@goinvo.com";
   $shortName = "Durham";

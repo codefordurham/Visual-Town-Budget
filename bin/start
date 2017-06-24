@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+set -e -m
+
+PORT=${PORT:-3000}
+
+compass watch &
+
+php -S localhost:$PORT -t src/httpdocs &
+
+fg %1
+
+kill %2

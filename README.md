@@ -5,13 +5,15 @@ Open-source budget visualization framework.
 
 ##Requirements
 * PHP-enabled webserver
-* SCSS compiler
+* SCSS compiler (gem install compass)
 
 ##Setup
 Clone this repository to your local machine and point your webserver root to `src/httpdocs`, the application should work out of the box, this repository contains some sample data that can be used for testing.
 
-##Localized Variables  
-Set the variables in the `localized_variables.php` file to your municipality's information. These are global variables used throughout the Visual Budget instance. The file can be found in `/src/httpdocs/includes`.  
+`bin/start` will start a PHP Development Server (default port 3000) and a `compass watch` command.
+
+##Localized Variables
+Set the variables in the `localized_variables.php` file to your municipality's information. These are global variables used throughout the Visual Budget instance. The file can be found in `/src/httpdocs/includes`.
 
 ##Components
 ####Cards

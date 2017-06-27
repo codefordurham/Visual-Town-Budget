@@ -47,7 +47,7 @@ avb.home = function () {
         position: 'right'
     }, {
         selector: '#chart-wrap',
-        text: 'Explore how the town revenues changed over time.',
+        text: 'Explore how the city revenues changed over time.',
         position: 'right'
     }, {
         selector: '#navigation',
@@ -134,7 +134,7 @@ avb.home = function () {
     */
     var schoolTour = [{
         selector: '#school',
-        text: 'Education is an important factor in Town expenses.',
+        text: 'Education is an important factor in city expenses.',
         position: 'bottom',
         before: function () {
             $('g[nodeid="' + townSchools + '"]').find('div').first().attr('id', 'school');

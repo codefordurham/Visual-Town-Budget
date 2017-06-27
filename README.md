@@ -254,3 +254,4 @@ For more information about CSV data formats or update procedures check `docs/dat
 ##License
 
 Visual Town Budget is licensed under the Apache-2.0 open source license. You can find more information on the Apache-2.0 license at http://www.apache.org/licenses/LICENSE-2.0
+ 

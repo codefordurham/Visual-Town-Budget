@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title><?php echo $siteName; ?></title>
-    <meta name="description" content="An interactive tool to learn more about the town of <?php echo $shortName; ?>, <?php echo $state; ?>." />
+    <meta name="description" content="An interactive tool to learn more about the city of <?php echo $shortName; ?>, <?php echo $state; ?>." />
 
 
     <?php

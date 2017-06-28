@@ -275,6 +275,7 @@ avb.chart = function () {
          */
         var xAxis = d3.svg.axis().scale(chart.xscale)
             .orient("bottom").tickSize(0, 0, 0).tickPadding(10)
+            .ticks(data.values.length)
             .tickFormat(function (d) {
                 return d;
             });
@@ -336,14 +337,6 @@ avb.chart = function () {
         chart.yAxisSocket = chart.axes.append("g")
             .attr("class", "axis")
             .attr("transform", "translate( " + chart.xmargin + ",0)").call(yAxis);
-
-        // mark odd entries
-
-        // d3 can't do odd selectors
-        $('.xAxis .tick:odd').each(function () {
-            //jquery can't add classes to SVG elements
-            d3.select(this).classed('odd', true);
-        });
 
         // highlights label that represents current year on axis
         d3.select('.xAxis g:nth-child(' + (yearIndex + 1) + ')')

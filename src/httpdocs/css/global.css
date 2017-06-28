@@ -456,15 +456,11 @@ p {
   font-size: 12px;
 }
 /* line 72, ../../scss/partials/_chart.scss */
-.axis .odd {
-  fill: none;
-}
-/* line 76, ../../scss/partials/_chart.scss */
 .axis .thisYear {
   fill: black;
   font-weight: bold;
 }
-/* line 81, ../../scss/partials/_chart.scss */
+/* line 77, ../../scss/partials/_chart.scss */
 .axis text {
   cursor: default;
 }
@@ -472,35 +468,35 @@ p {
 /*
 * Layers
 */
-/* line 90, ../../scss/partials/_chart.scss */
+/* line 86, ../../scss/partials/_chart.scss */
 .multiarea {
   fill-opacity: 0.65;
 }
 
-/* line 93, ../../scss/partials/_chart.scss */
+/* line 89, ../../scss/partials/_chart.scss */
 .multiline {
   fill: none;
   stroke-width: 2px;
   opacity: 1;
 }
 
-/* line 98, ../../scss/partials/_chart.scss */
+/* line 94, ../../scss/partials/_chart.scss */
 .multiaxis path {
   stroke-width: 0;
   fill: none;
 }
 
-/* line 103, ../../scss/partials/_chart.scss */
+/* line 99, ../../scss/partials/_chart.scss */
 .multigrid .tick {
   stroke: lightgray;
   opacity: 0;
 }
-/* line 107, ../../scss/partials/_chart.scss */
+/* line 103, ../../scss/partials/_chart.scss */
 .multigrid path {
   stroke-width: 1;
 }
 
-/* line 112, ../../scss/partials/_chart.scss */
+/* line 108, ../../scss/partials/_chart.scss */
 .layerLine, .sideShadow {
   box-shadow: -3px 0px 8px black;
   margin-left: 10px;
